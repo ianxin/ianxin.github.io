@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="软件；密码," />
+  <meta name="keywords" content="Python; Algorithm," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="常用函数解析先总结下常用函数，更多函数介绍，请移步参考资料中的使用手册。 12345678910111213141516171819202122232425262728293031323334//声明变量pairing_t pairing;//声明一个对element_t;//声明元素类型的变量//初始化pairing_init_inp_str(pairing,stdin);//以标准输入的形式，">
-<meta name="keywords" content="软件；密码">
+<meta name="description" content="源代码：https://github.com/ianxin/Algorithm/tree/master/src 问题描述： 给出两个整数a和b, 求他们的和, 但不能使用 + 等数学运算符。 思路： a+b可以分为三步来，比如a=3,b=2  a的二进制是0011， b的二进制是0010，如果不考虑进位a+b的结果为0001。 只考虑进位，结果是0011+0010=0010 将该进位左移一位，变为">
+<meta name="keywords" content="Python; Algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PBC 库使用总结">
-<meta property="og:url" content="http://yoursite.com/2018/01/08/PBC库使用总结/index.html">
+<meta property="og:title" content="A+B问题">
+<meta property="og:url" content="http://yoursite.com/2018/03/14/A-B问题/index.html">
 <meta property="og:site_name" content="gax">
-<meta property="og:description" content="常用函数解析先总结下常用函数，更多函数介绍，请移步参考资料中的使用手册。 12345678910111213141516171819202122232425262728293031323334//声明变量pairing_t pairing;//声明一个对element_t;//声明元素类型的变量//初始化pairing_init_inp_str(pairing,stdin);//以标准输入的形式，">
+<meta property="og:description" content="源代码：https://github.com/ianxin/Algorithm/tree/master/src 问题描述： 给出两个整数a和b, 求他们的和, 但不能使用 + 等数学运算符。 思路： a+b可以分为三步来，比如a=3,b=2  a的二进制是0011， b的二进制是0010，如果不考虑进位a+b的结果为0001。 只考虑进位，结果是0011+0010=0010 将该进位左移一位，变为">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-07T00:46:53.759Z">
+<meta property="og:updated_time" content="2018-03-14T04:40:22.033Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PBC 库使用总结">
-<meta name="twitter:description" content="常用函数解析先总结下常用函数，更多函数介绍，请移步参考资料中的使用手册。 12345678910111213141516171819202122232425262728293031323334//声明变量pairing_t pairing;//声明一个对element_t;//声明元素类型的变量//初始化pairing_init_inp_str(pairing,stdin);//以标准输入的形式，">
+<meta name="twitter:title" content="A+B问题">
+<meta name="twitter:description" content="源代码：https://github.com/ianxin/Algorithm/tree/master/src 问题描述： 给出两个整数a和b, 求他们的和, 但不能使用 + 等数学运算符。 思路： a+b可以分为三步来，比如a=3,b=2  a的二进制是0011， b的二进制是0010，如果不考虑进位a+b的结果为0001。 只考虑进位，结果是0011+0010=0010 将该进位左移一位，变为">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/08/PBC库使用总结/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/14/A-B问题/"/>
 
 
 
 
 
-  <title>PBC 库使用总结 | gax</title>
+  <title>A+B问题 | gax</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/08/PBC库使用总结/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/14/A-B问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gax">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PBC 库使用总结</h1>
+          <h1 class="post-title" itemprop="name headline">A+B问题</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-08T21:32:11+08:00">
-                2018-01-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-14T11:19:34+08:00">
+                2018-03-14
               </time>
             
 
@@ -329,7 +329,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  880
+                  295
                 </span>
               
 
@@ -345,7 +345,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  1
                 </span>
               
             </div>
@@ -366,25 +366,27 @@
       
 
       
-        <h2 id="常用函数解析"><a href="#常用函数解析" class="headerlink" title="常用函数解析"></a>常用函数解析</h2><p>先总结下常用函数，更多函数介绍，请移步参考资料中的使用手册。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//声明变量</span></div><div class="line"><span class="keyword">pairing_t</span> pairing;<span class="comment">//声明一个对</span></div><div class="line"><span class="keyword">element_t</span>;<span class="comment">//声明元素类型的变量</span></div><div class="line"></div><div class="line"><span class="comment">//初始化</span></div><div class="line">pairing_init_inp_str(pairing,<span class="built_in">stdin</span>);<span class="comment">//以标准输入的形式，初始化配对类型变量</span></div><div class="line">element_init_Zr(<span class="keyword">element_t</span> e,pairing);<span class="comment">//注意Z大写，将变量初始化为Zr中的元素</span></div><div class="line">element_init_G1(<span class="keyword">element_t</span> e,pairing);<span class="comment">//初始化G1上的元素</span></div><div class="line">elemrnt_init_G2(<span class="keyword">element_t</span> e,pairing);</div><div class="line">element_init_GT(<span class="keyword">element_t</span> e,pairing);</div><div class="line"></div><div class="line"><span class="comment">//随机数选取</span></div><div class="line">element_random(<span class="keyword">element_t</span> e);<span class="comment">//选择随机数</span></div><div class="line">element_from_hash(<span class="keyword">element_t</span> e, <span class="keyword">void</span> *data, <span class="keyword">int</span> len);<span class="comment">//用来模拟特殊的hash函数，将hash值映射到群中。第一个参数为输出值，第二个为hash值，最后一个为hash的长度（字节）</span></div><div class="line"></div><div class="line"><span class="comment">//运算函数</span></div><div class="line">element_add(<span class="keyword">element_t</span> n, <span class="keyword">element_t</span> a, <span class="keyword">element_t</span> b);<span class="comment">//加法,n=a+b</span></div><div class="line">element_mul(<span class="keyword">element_t</span> n, <span class="keyword">element_t</span> a, <span class="keyword">element_t</span> b);<span class="comment">//乘法,n=a*b</span></div><div class="line">element_mul_zn(<span class="keyword">element_t</span> c, <span class="keyword">element_t</span> a, <span class="keyword">element_t</span> z);<span class="comment">//域中的乘法运算，第三个参数必须为整数环zn中的元素。c=z*a,顺序不能改变</span></div><div class="line">element_pow_zn(<span class="keyword">element_t</span> x, <span class="keyword">element_t</span> a, <span class="keyword">element_t</span> n);<span class="comment">//指数,x=a^n</span></div><div class="line">element_pow2_zn(<span class="keyword">element_t</span> x, <span class="keyword">element_t</span> a1, <span class="keyword">element_t</span> n1,<span class="keyword">element_t</span> a2, <span class="keyword">element_t</span> n2)<span class="comment">//x=(a1^n)*(a2^n2),比分两次指数运算速度快</span></div><div class="line">element_square(<span class="keyword">element_t</span> n, <span class="keyword">element_t</span> a);<span class="comment">//平方,n=a^2</span></div><div class="line">element_neg(<span class="keyword">element_t</span> n, <span class="keyword">element_t</span> a);<span class="comment">//n=-a</span></div><div class="line">element_invert();<span class="comment">//取逆运算</span></div><div class="line">element_pairing(<span class="keyword">element_t</span> out, <span class="keyword">element_t</span> in1, <span class="keyword">element_t</span> in2);<span class="comment">//对运算,e=(in1,in2)</span></div><div class="line">pairing_apply(<span class="keyword">element_t</span> out, <span class="keyword">element_t</span> in1, <span class="keyword">element_t</span> in2,<span class="keyword">pairing_t</span> pairing);<span class="comment">//对运算,不太清楚与上个函数的区别，计算结果没有取别</span></div><div class="line"></div><div class="line"><span class="comment">//其他函数</span></div><div class="line">element_cmp();<span class="comment">//比较，相等返回0，不等返回1</span></div><div class="line">element_length_in_bytes();<span class="comment">//返回变量的字节数</span></div><div class="line">element_printf();<span class="comment">//输出</span></div><div class="line">pbc_get_time();<span class="comment">//获取当前的系统时间，也可以用get_time()</span></div><div class="line">element_clear();<span class="comment">//释放变量内存</span></div><div class="line">pairing_clear();<span class="comment">//释放对内存</span></div></pre></td></tr></table></figure>
-<h2 id="重点及易错点"><a href="#重点及易错点" class="headerlink" title="重点及易错点"></a>重点及易错点</h2><ul>
-<li><p>函数的输出参数通常在输入参数之前</p>
-</li>
-<li><p>注意乘法运算的顺序，<strong>不能改变</strong> </p>
-</li>
-<li><p>同一个变量在一次函数调用中既可以作输入也可以作输出。例如求逆函数 <code>element_invert(t,t)-&gt;t=1/t</code></p>
-</li>
-<li><p>变量使用前必须初始化，当不再使用时，必须释放资源。使用<code>element_clean()</code>或<code>pairing_clean()</code>函数</p>
-</li>
-<li><p>整数环中元素之间运算，结果还是整数环变量，整数环元素与群运算，结果为群变量。有点拗口，举个例子</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">element_t</span> s,a,y,p,p_pub;<span class="comment">//声明变量</span></div><div class="line"></div><div class="line">element_init_Zr(s);<span class="comment">//初始化为zr中元素</span></div><div class="line">element_init_Zr(a);</div><div class="line">element_init_Zr(y);</div><div class="line">element_init_G1(p);<span class="comment">//初始化为群G1上的元素</span></div><div class="line">init_init_G1(p_pub);</div><div class="line"></div><div class="line">element_random(s);<span class="comment">//选取随机数</span></div><div class="line">element_random(a);</div><div class="line">element_random(p);</div><div class="line"></div><div class="line">element_mul_zn(p_pub,p,s);<span class="comment">//p_pub=s*p，注意参数位置，不能颠倒</span></div><div class="line">element_mul_zn(y,a,s);<span class="comment">//y=s*a</span></div></pre></td></tr></table></figure>
-<p>例子中a,s,y为整数环 $Z<em>r$ 中的元素，p为群上元素。$p</em>{pub}=s<em>p$ , $p_{pub}$ 也为群上元素。$y=s</em>a$ , y为整数环 $Z_r$ 中的元素。群上元素其实就是椭圆曲线坐标，可以把整数环中元素当成整数，群上元素看成坐标，这样很容易就理解了。</p>
-<p>获取系统当前时间可以使用两个函数，<code>get_time()</code> 在 VC++ 6.0 中使用，Visual Studio 2012使用<code>pbc_get_time()</code> . 关于Visual Studio 2012的配置，参考我以前博客 <a href="https://ianxin.github.io/2018/01/02/win10%E4%B8%8B%E4%BD%BF%E7%94%A8MINGW%E7%BC%96%E8%AF%91PBC%E5%BA%93/#more" target="_blank" rel="external">win10下使用MINGW编译PBC库</a> 如果使用cpp，可能会出现链接错误。因为有些库函数是用c语法编写，所以要更改部分函数，具体见 <a href="https://www.cnblogs.com/hiloves/p/4678848.html" target="_blank" rel="external">error LNK2019: 无法解析的外部符号之分析</a></p>
-<p>在获取程序运行时间时，库给出的函数总是不精确，找了很长时间也没找到原因。最终利用for循环运行500次，求平均，最终算是得到较为稳定的时间差。</p>
-</li>
+        <p>源代码：<a href="https://github.com/ianxin/Algorithm/tree/master/src" target="_blank" rel="external">https://github.com/ianxin/Algorithm/tree/master/src</a></p>
+<p>问题描述：</p>
+<p>给出两个整数a和b, 求他们的和, 但不能使用 + 等数学运算符。</p>
+<p>思路：</p>
+<p>a+b可以分为三步来，比如a=3,b=2</p>
+<ol>
+<li>a的二进制是0011， b的二进制是0010，如果不考虑进位a+b的结果为0001。</li>
+<li>只考虑进位，结果是0011+0010=0010</li>
+<li>将该进位左移一位，变为00100</li>
+<li>将00100再与0001进行异或，得到00101，即十进制下等于5</li>
+<li>结束</li>
+</ol>
+<p>常规 Python 解法如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="string">"""</span></div><div class="line"><span class="string">    @param a: The first integer</span></div><div class="line"><span class="string">    @param b: The second integer</span></div><div class="line"><span class="string">    @return:  The sum of a and b</span></div><div class="line"><span class="string">    异或=不考虑进位的加法</span></div><div class="line"><span class="string">    与=只考虑进位</span></div><div class="line"><span class="string">    """</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">aplusb</span><span class="params">(a, b)</span>:</span></div><div class="line">        <span class="comment"># write your code here, try to do it without arithmetic operators.</span></div><div class="line">        <span class="keyword">if</span> b == <span class="number">0</span>:</div><div class="line">            <span class="keyword">return</span> a</div><div class="line">        <span class="keyword">if</span> a == <span class="number">0</span>:</div><div class="line">            <span class="keyword">return</span> b</div><div class="line">        <span class="keyword">while</span> b:</div><div class="line">            carry = (a&amp;b)&lt;&lt;<span class="number">1</span> </div><div class="line">            a = a ^ b</div><div class="line">            b = carry</div><div class="line">        <span class="keyword">return</span> a</div></pre></td></tr></table></figure>
+<p>但是，此解法在数据较大时运行时间过长，无法通过测试。</p>
+<p>更改后的解法如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">aplusb</span><span class="params">(a, b)</span>:</span></div><div class="line">    <span class="comment"># write your code here, try to do it without arithmetic operators.</span></div><div class="line">    limit = <span class="number">0xfffffffff</span></div><div class="line">    <span class="keyword">while</span> b:</div><div class="line">        a, b = (a ^ b) &amp; limit, (a &amp; b) &lt;&lt; <span class="number">1</span></div><div class="line">    <span class="keyword">return</span> a <span class="keyword">if</span> a &amp; <span class="number">1</span> &lt;&lt; <span class="number">32</span> == <span class="number">0</span> <span class="keyword">else</span> a | (~limit)</div></pre></td></tr></table></figure>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li><a href="https://shawnhardy.me/index.php/2018/02/27/lintcode-001-a-b-wen-ti/" target="_blank" rel="external">LintCode 001. A + B 问题</a></li>
+<li><a href="http://www.cnblogs.com/zhangziqiu/archive/2011/03/30/ComputerCode.html" target="_blank" rel="external">原码，反码，补码详解</a></li>
 </ul>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://crypto.stanford.edu/pbc/manual/" target="_blank" rel="external">PBC library manual</a></p>
 
       
     </div>
@@ -426,7 +428,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/软件；密码/" rel="tag"># 软件；密码</a>
+            <a href="/tags/Python-Algorithm/" rel="tag"># Python; Algorithm</a>
           
         </div>
       
@@ -439,8 +441,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/02/hexo generate错误/" rel="next" title="hexo generate 错误">
-                <i class="fa fa-chevron-left"></i> hexo generate 错误
+              <a href="/2018/03/14/本地文件删除-路径改变，同步到远程库/" rel="next" title="本地文件删除/路径改变，同步到远程库">
+                <i class="fa fa-chevron-left"></i> 本地文件删除/路径改变，同步到远程库
               </a>
             
           </div>
@@ -448,10 +450,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/23/无法解析主机-xxx/" rel="prev" title="无法解析主机 xxx">
-                无法解析主机 xxx <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -603,7 +601,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用函数解析"><span class="nav-number">1.</span> <span class="nav-text">常用函数解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重点及易错点"><span class="nav-number">2.</span> <span class="nav-text">重点及易错点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">1.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
