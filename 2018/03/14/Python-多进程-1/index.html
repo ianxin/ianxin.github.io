@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="元字符及其说明   元字符 说明     . 匹配任意字符（换行符\n除外）   \ 转义字符   [… ] 字符集，对应位置可以是字符集中任意字符   \d 数字：[0-9]   \D 非数字：[^\d]   \s 空白字符：[\t\r\n\f\v&amp;lt;空格&amp;gt;]   \S 非空白字符：[^\s]   \w 单词字符：[a-zA-Z0-9]   \W 非单词字符：[^\w]       元">
+<meta name="description" content="多进程池 在apply 中，每个进程顺序执行  1234567891011121314151617from multiprocessing import Poolimport os,timemylist = [1,2,3]def f0():   for i in mylist:       print(&apos;执行进程&amp;#123;&amp;#125;&apos;.format(os.getpid()))       ti">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 正则表达式总结">
-<meta property="og:url" content="http://yoursite.com/2018/01/24/Python正则表达式总结/index.html">
+<meta property="og:title" content="Python 多进程(1)">
+<meta property="og:url" content="http://yoursite.com/2018/03/14/Python-多进程-1/index.html">
 <meta property="og:site_name" content="gax">
-<meta property="og:description" content="元字符及其说明   元字符 说明     . 匹配任意字符（换行符\n除外）   \ 转义字符   [… ] 字符集，对应位置可以是字符集中任意字符   \d 数字：[0-9]   \D 非数字：[^\d]   \s 空白字符：[\t\r\n\f\v&amp;lt;空格&amp;gt;]   \S 非空白字符：[^\s]   \w 单词字符：[a-zA-Z0-9]   \W 非单词字符：[^\w]       元">
+<meta property="og:description" content="多进程池 在apply 中，每个进程顺序执行  1234567891011121314151617from multiprocessing import Poolimport os,timemylist = [1,2,3]def f0():   for i in mylist:       print(&apos;执行进程&amp;#123;&amp;#125;&apos;.format(os.getpid()))       ti">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-07T00:47:12.018Z">
+<meta property="og:updated_time" content="2018-03-14T00:47:29.159Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python 正则表达式总结">
-<meta name="twitter:description" content="元字符及其说明   元字符 说明     . 匹配任意字符（换行符\n除外）   \ 转义字符   [… ] 字符集，对应位置可以是字符集中任意字符   \d 数字：[0-9]   \D 非数字：[^\d]   \s 空白字符：[\t\r\n\f\v&amp;lt;空格&amp;gt;]   \S 非空白字符：[^\s]   \w 单词字符：[a-zA-Z0-9]   \W 非单词字符：[^\w]       元">
+<meta name="twitter:title" content="Python 多进程(1)">
+<meta name="twitter:description" content="多进程池 在apply 中，每个进程顺序执行  1234567891011121314151617from multiprocessing import Poolimport os,timemylist = [1,2,3]def f0():   for i in mylist:       print(&apos;执行进程&amp;#123;&amp;#125;&apos;.format(os.getpid()))       ti">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/24/Python正则表达式总结/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/14/Python-多进程-1/"/>
 
 
 
 
 
-  <title>Python 正则表达式总结 | gax</title>
+  <title>Python 多进程(1) | gax</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/24/Python正则表达式总结/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/14/Python-多进程-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gax">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python 正则表达式总结</h1>
+          <h1 class="post-title" itemprop="name headline">Python 多进程(1)</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-24T16:59:56+08:00">
-                2018-01-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-14T08:41:33+08:00">
+                2018-03-14
               </time>
             
 
@@ -329,7 +329,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,293
+                  351
                 </span>
               
 
@@ -345,7 +345,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  1
                 </span>
               
             </div>
@@ -366,152 +366,20 @@
       
 
       
-        <h2 id="元字符及其说明"><a href="#元字符及其说明" class="headerlink" title="元字符及其说明"></a>元字符及其说明</h2><table>
-<thead>
-<tr>
-<th>元字符</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.</td>
-<td style="text-align:center">匹配任意字符（换行符\n除外）</td>
-</tr>
-<tr>
-<td>\</td>
-<td style="text-align:center">转义字符</td>
-</tr>
-<tr>
-<td>[… ]</td>
-<td style="text-align:center">字符集，对应位置可以是字符集中任意字符</td>
-</tr>
-<tr>
-<td>\d</td>
-<td style="text-align:center">数字：[0-9]</td>
-</tr>
-<tr>
-<td>\D</td>
-<td style="text-align:center">非数字：[^\d]</td>
-</tr>
-<tr>
-<td>\s</td>
-<td style="text-align:center">空白字符：[\t\r\n\f\v&lt;空格&gt;]</td>
-</tr>
-<tr>
-<td>\S</td>
-<td style="text-align:center">非空白字符：[^\s]</td>
-</tr>
-<tr>
-<td>\w</td>
-<td style="text-align:center">单词字符：[a-zA-Z0-9]</td>
-</tr>
-<tr>
-<td>\W</td>
-<td style="text-align:center">非单词字符：[^\w]</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>元字符</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>+</td>
-<td style="text-align:center">匹配前一个字符至少1次</td>
-</tr>
-<tr>
-<td>?</td>
-<td style="text-align:center">匹配前一个字符0/1次</td>
-</tr>
-<tr>
-<td>{m}</td>
-<td style="text-align:center">匹配前一个字符m次</td>
-</tr>
-<tr>
-<td>{m,n}</td>
-<td style="text-align:center">匹配前一个字符m至n次</td>
-</tr>
-<tr>
-<td>^</td>
-<td style="text-align:center">匹配字符串开头</td>
-</tr>
-<tr>
-<td>$</td>
-<td style="text-align:center">匹配字符串结尾</td>
-</tr>
-<tr>
-<td>*</td>
-<td style="text-align:center">匹配一个字符任意多次包括0次</td>
-</tr>
-<tr>
-<td>(…)</td>
-<td style="text-align:center">表达式分组</td>
-</tr>
-<tr>
-<td>\<number></number></td>
-<td style="text-align:center">引用编号为number的分组匹配到字符串</td>
-</tr>
-</tbody>
-</table>
-<p>在 Python 中，可以利用内置的 re 模块来使用正则表达式。在因为 Python 中<code>\</code>也用转义，因此使用 Python的原始字符串，加前缀r``。</p>
-<h2 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h2><ul>
-<li>compile函数</li>
-<li>match函数</li>
-<li>search函数</li>
-<li>findall函数</li>
-<li>finditer函数</li>
-<li>split函数</li>
-<li>sub函数</li>
-<li>subn函数</li>
+        <h2 id="多进程池"><a href="#多进程池" class="headerlink" title="多进程池"></a>多进程池</h2><ul>
+<li>在apply 中，每个进程顺序执行</li>
 </ul>
-<p>re 模块的一般使用步骤如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Pool</div><div class="line"><span class="keyword">import</span> os,time</div><div class="line"></div><div class="line">mylist = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">f0</span><span class="params">()</span>:</span></div><div class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> mylist:</div><div class="line">       print(<span class="string">'执行进程&#123;&#125;'</span>.format(os.getpid()))</div><div class="line">       time.sleep(<span class="number">2</span>)</div><div class="line">       print(i)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    pool = Pool(<span class="number">2</span>)<span class="comment">#创建包含2个进程的进程池</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>):<span class="comment">#每次进入循环后，向进程池中申请一个进程</span></div><div class="line">        pool.apply(f0)<span class="comment">#apply里面每个进程执行完毕后才执行下一个进程，这个语句相当于直接调用f0()</span></div><div class="line"></div><div class="line">    pool.close()<span class="comment">#执行完close后不会有新的进程加入到pool,join函数等待所有子进程结束</span></div><div class="line">    pool.join()<span class="comment">#等待进程运行完毕，先调用close函数，否则会出错</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">执行进程<span class="number">7124</span></div><div class="line"><span class="number">1</span></div><div class="line">执行进程<span class="number">7124</span></div><div class="line"><span class="number">2</span></div><div class="line">执行进程<span class="number">7124</span></div><div class="line"><span class="number">3</span></div><div class="line">执行进程<span class="number">13284</span></div><div class="line"><span class="number">1</span></div><div class="line">执行进程<span class="number">13284</span></div><div class="line"><span class="number">2</span></div><div class="line">执行进程<span class="number">13284</span></div><div class="line"><span class="number">3</span></div></pre></td></tr></table></figure>
 <ul>
-<li>使用 compile 函数将正则表达式的字符串形式编译为一个 Pattern 对象</li>
-<li>通过 Pattern 对象提供的一系列方法对文本进行匹配查找，获得匹配结果（一个 Match 对象）</li>
-<li>最后使用 Match 对象提供的属性和方法获得信息，根据需要进行其他的操作</li>
+<li>在 apply_async 中，各个进程异步执行</li>
 </ul>
-<h3 id="complie函数"><a href="#complie函数" class="headerlink" title="complie函数"></a>complie函数</h3><p>compile 函数用于编译正则表达式，生成一个 pattern 对象，函数如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">re.compile(pattern[,flag])</div></pre></td></tr></table></figure>
-<p>其中，pattern 是一个字符串形式的正则表达式，flag 是一个可选参数，表示匹配模式，比如忽略大小写，多行模式等。</p>
-<h3 id="match函数"><a href="#match函数" class="headerlink" title="match函数"></a>match函数</h3><p>match 函数用于查找字符串，它是一次匹配，只要找到了一个匹配的结果就返回，而不是查找所有匹配的结果。函数如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">match(string[, pos[, endpos]])</div></pre></td></tr></table></figure>
-<p>其中，string 是待匹配的字符串，pos 和 endpos 是可选参数，指定字符串的起始和终点位置，默认值分别是 0 和 len (字符串长度)。因此，<strong>当你不指定 pos 和 endpos 时，match 方法默认匹配字符串的头部</strong>。</p>
-<p>当匹配成功时，返回一个 Match 对象，如果没有匹配上，则返回 None。</p>
-<h3 id="search-函数"><a href="#search-函数" class="headerlink" title="search 函数"></a>search 函数</h3><p>search 用于查找字符串的任何位置，它也是一次匹配，只要找到了一个匹配的结果就返回，而不是查找所有匹配的结果，它的一般使用形式如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">search(string[, pos[, endpos]])</div></pre></td></tr></table></figure>
-<p>其中，string 是待匹配的字符串，pos 和 endpos 是可选参数，指定字符串的起始和终点位置，默认值分别是 0 和 len (字符串长度)。</p>
-<p>当匹配成功时，返回一个 Match 对象，如果没有匹配上，则返回 None。</p>
-<h3 id="findall-函数"><a href="#findall-函数" class="headerlink" title="findall 函数"></a>findall 函数</h3><p>上面的 match 和 search 都是一次匹配，只要找到了一个匹配的结果就返回。然而，在大多数时候，我们需要搜索整个字符串，获得所有匹配的结果。</p>
-<p>findall 方法的使用形式如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">findall(string[, pos[, endpos]])</div></pre></td></tr></table></figure>
-<p>其中，string 是待匹配的字符串，pos 和 endpos 是可选参数，指定字符串的起始和终点位置，默认值分别是 0 和 len (字符串长度)。</p>
-<p>findall 以列表形式返回全部能匹配的子串，如果没有匹配，则返回一个空列表。</p>
-<h3 id="finditer-函数"><a href="#finditer-函数" class="headerlink" title="finditer 函数"></a>finditer 函数</h3><p>finditer 与 findall 类似，也是搜索整个字符串，获得所有匹配的结果。但它返回一个顺序访问每一个匹配结果（Match 对象）的迭代器。</p>
-<h3 id="split-函数"><a href="#split-函数" class="headerlink" title="split 函数"></a>split 函数</h3><p>split 函数按照能够匹配的子串将字符串分割后返回列表，它的使用形式如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">split(string[, maxsplit])</div></pre></td></tr></table></figure>
-<p>其中，maxsplit 用于指定最大分割次数，不指定将全部分割。</p>
-<h3 id="sub-函数"><a href="#sub-函数" class="headerlink" title="sub 函数"></a>sub 函数</h3><p>sub 函数用于替换。它的使用形式如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sub(repl, string[, count])</div></pre></td></tr></table></figure>
-<p>其中，repl 可以是字符串也可以是一个函数：</p>
-<ul>
-<li>如果 repl 是字符串，则会使用 repl 去替换字符串每一个匹配的子串，并返回替换后的字符串，另外，repl 还可以使用 <code>\id</code> 的形式来引用分组，但不能使用编号 0；</li>
-<li>如果 repl 是函数，这个方法应当只接受一个参数（Match 对象），并返回一个字符串用于替换（返回的字符串中不能再引用分组）。</li>
-</ul>
-<p>count 用于指定最多替换次数，不指定时全部替换。</p>
-<h3 id="subn-函数"><a href="#subn-函数" class="headerlink" title="subn 函数"></a>subn 函数</h3><p>subn 函数与 sub 类似，也用于替换。它的使用形式如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">subn(repl, string[, count])</div></pre></td></tr></table></figure>
-<p>它返回一个元组：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(sub(repl, string[, count]), 替换次数)</div></pre></td></tr></table></figure>
-<p>元组有两个元素，第一个元素是使用 sub 方法的结果，第二个元素返回原字符串被替换的次数。</p>
-<p>事实上，也可以不使用 compile 函数生成的 Pattern 对象，直接使用match，search等函数。如果一个正则表达式需要用到多次，考虑到效率，应该使用Pattern对象。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="http://funhacks.net/2016/12/27/regular_expression/#sub-%E6%96%B9%E6%B3%95" target="_blank" rel="external">Python 正则表达式 re 模块</a></li>
-</ul>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Pool</div><div class="line"><span class="keyword">import</span> os,time</div><div class="line"></div><div class="line">mylist = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">f0</span><span class="params">()</span>:</span></div><div class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> mylist:</div><div class="line">       print(<span class="string">'执行进程&#123;&#125;'</span>.format(os.getpid()))</div><div class="line">       time.sleep(<span class="number">2</span>)</div><div class="line">       print(i)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    pool = Pool(<span class="number">2</span>)<span class="comment">#创建包含2个进程的进程池</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>):<span class="comment">#每次进入循环后，向进程池中申请一个进程</span></div><div class="line">        pool.apply_async(f0)<span class="comment">#异步执行</span></div><div class="line"></div><div class="line">    pool.close()</div><div class="line">    pool.join()</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">执行进程<span class="number">11860</span></div><div class="line">执行进程<span class="number">4552</span></div><div class="line"><span class="number">1</span></div><div class="line">执行进程<span class="number">11860</span></div><div class="line"><span class="number">1</span></div><div class="line">执行进程<span class="number">4552</span></div><div class="line"><span class="number">2</span></div><div class="line">执行进程<span class="number">11860</span></div><div class="line"><span class="number">2</span></div><div class="line">执行进程<span class="number">4552</span></div><div class="line"><span class="number">3</span></div><div class="line"><span class="number">3</span></div></pre></td></tr></table></figure>
+<p>两个方法的区别：</p>
+<p><code>p.apply()</code> 每个任务顺序执行； <code>p.apply_async()</code> 每一个任务都并发执行。</p>
 
       
     </div>
@@ -566,8 +434,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/24/Linux常用命令总结/" rel="next" title="Linux 常用命令总结">
-                <i class="fa fa-chevron-left"></i> Linux 常用命令总结
+              <a href="/2018/03/07/Cookies与Session的区别/" rel="next" title="Cookies 与 Session 的区别">
+                <i class="fa fa-chevron-left"></i> Cookies 与 Session 的区别
               </a>
             
           </div>
@@ -575,10 +443,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/25/使用Python下载图片/" rel="prev" title="使用 Python 下载图片">
-                使用 Python 下载图片 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -730,7 +594,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#元字符及其说明"><span class="nav-number">1.</span> <span class="nav-text">元字符及其说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用函数"><span class="nav-number">2.</span> <span class="nav-text">常用函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#complie函数"><span class="nav-number">2.1.</span> <span class="nav-text">complie函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#match函数"><span class="nav-number">2.2.</span> <span class="nav-text">match函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#search-函数"><span class="nav-number">2.3.</span> <span class="nav-text">search 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#findall-函数"><span class="nav-number">2.4.</span> <span class="nav-text">findall 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#finditer-函数"><span class="nav-number">2.5.</span> <span class="nav-text">finditer 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#split-函数"><span class="nav-number">2.6.</span> <span class="nav-text">split 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sub-函数"><span class="nav-number">2.7.</span> <span class="nav-text">sub 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#subn-函数"><span class="nav-number">2.8.</span> <span class="nav-text">subn 函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#多进程池"><span class="nav-number">1.</span> <span class="nav-text">多进程池</span></a></li></ol></div>
             
 
           </div>
