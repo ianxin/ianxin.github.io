@@ -83,7 +83,7 @@
 <meta name="keywords" content="软件；密码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PBC 库使用总结">
-<meta property="og:url" content="http://yoursite.com/2018/01/08/PBC库使用总结/index.html">
+<meta property="og:url" content="https://ianxin.github.io/2018/01/08/PBC库使用总结/index.html">
 <meta property="og:site_name" content="gax">
 <meta property="og:description" content="常用函数解析先总结下常用函数，更多函数介绍，请移步参考资料中的使用手册。 12345678910111213141516171819202122232425262728293031323334//声明变量pairing_t pairing;//声明一个对element_t;//声明元素类型的变量//初始化pairing_init_inp_str(pairing,stdin);//以标准输入的形式，">
 <meta property="og:locale" content="zh-Hans">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/08/PBC库使用总结/"/>
+  <link rel="canonical" href="https://ianxin.github.io/2018/01/08/PBC库使用总结/"/>
 
 
 
@@ -221,6 +221,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-commonweal">
           <a href="/404/" rel="section">
             
@@ -232,9 +242,47 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -263,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/08/PBC库使用总结/">
+    <link itemprop="mainEntityOfPage" href="https://ianxin.github.io/2018/01/08/PBC库使用总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gax">
@@ -380,7 +428,7 @@
 <li><p>整数环中元素之间运算，结果还是整数环变量，整数环元素与群运算，结果为群变量。有点拗口，举个例子</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">element_t</span> s,a,y,p,p_pub;<span class="comment">//声明变量</span></div><div class="line"></div><div class="line">element_init_Zr(s);<span class="comment">//初始化为zr中元素</span></div><div class="line">element_init_Zr(a);</div><div class="line">element_init_Zr(y);</div><div class="line">element_init_G1(p);<span class="comment">//初始化为群G1上的元素</span></div><div class="line">init_init_G1(p_pub);</div><div class="line"></div><div class="line">element_random(s);<span class="comment">//选取随机数</span></div><div class="line">element_random(a);</div><div class="line">element_random(p);</div><div class="line"></div><div class="line">element_mul_zn(p_pub,p,s);<span class="comment">//p_pub=s*p，注意参数位置，不能颠倒</span></div><div class="line">element_mul_zn(y,a,s);<span class="comment">//y=s*a</span></div></pre></td></tr></table></figure>
 <p>例子中a,s,y为整数环 $Z<em>r$ 中的元素，p为群上元素。$p</em>{pub}=s<em>p$ , $p_{pub}$ 也为群上元素。$y=s</em>a$ , y为整数环 $Z_r$ 中的元素。群上元素其实就是椭圆曲线坐标，可以把整数环中元素当成整数，群上元素看成坐标，这样很容易就理解了。</p>
-<p>获取系统当前时间可以使用两个函数，<code>get_time()</code> 在 VC++ 6.0 中使用，Visual Studio 2012使用<code>pbc_get_time()</code> . 关于Visual Studio 2012的配置，参考我以前博客 <a href="https://ianxin.github.io/2018/01/02/win10%E4%B8%8B%E4%BD%BF%E7%94%A8MINGW%E7%BC%96%E8%AF%91PBC%E5%BA%93/#more" target="_blank" rel="external">win10下使用MINGW编译PBC库</a> 如果使用cpp，可能会出现链接错误。因为有些库函数是用c语法编写，所以要更改部分函数，具体见 <a href="https://www.cnblogs.com/hiloves/p/4678848.html" target="_blank" rel="external">error LNK2019: 无法解析的外部符号之分析</a></p>
+<p>获取系统当前时间可以使用两个函数，<code>get_time()</code> 在 VC++ 6.0 中使用，Visual Studio 2012使用<code>pbc_get_time()</code> . 关于Visual Studio 2012的配置，参考我以前博客 <a href="https://ianxin.github.io/2018/01/02/win10%E4%B8%8B%E4%BD%BF%E7%94%A8MINGW%E7%BC%96%E8%AF%91PBC%E5%BA%93/#more">win10下使用MINGW编译PBC库</a> 如果使用cpp，可能会出现链接错误。因为有些库函数是用c语法编写，所以要更改部分函数，具体见 <a href="https://www.cnblogs.com/hiloves/p/4678848.html" target="_blank" rel="external">error LNK2019: 无法解析的外部符号之分析</a></p>
 <p>在获取程序运行时间时，库给出的函数总是不精确，找了很长时间也没找到原因。最终利用for循环运行500次，求平均，最终算是得到较为稳定的时间差。</p>
 </li>
 </ul>
@@ -420,6 +468,24 @@
       </div>
     
 
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    gax
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://ianxin.github.io/2018/01/08/PBC库使用总结/" title="PBC 库使用总结">https://ianxin.github.io/2018/01/08/PBC库使用总结/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
     
 
     <footer class="post-footer">
@@ -805,10 +871,38 @@
 
 
 
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.3"></script>
+
+
 
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
   

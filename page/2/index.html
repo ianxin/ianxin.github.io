@@ -82,7 +82,7 @@
 <meta name="description" content="be water">
 <meta property="og:type" content="website">
 <meta property="og:title" content="gax">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:url" content="https://ianxin.github.io/page/2/index.html">
 <meta property="og:site_name" content="gax">
 <meta property="og:description" content="be water">
 <meta property="og:locale" content="zh-Hans">
@@ -118,7 +118,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/page/2/"/>
+  <link rel="canonical" href="https://ianxin.github.io/page/2/"/>
 
 
 
@@ -220,6 +220,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-commonweal">
           <a href="/404/" rel="section">
             
@@ -231,9 +241,47 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -262,7 +310,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/24/Linux常用命令总结/">
+    <link itemprop="mainEntityOfPage" href="https://ianxin.github.io/2018/01/24/Linux常用命令总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gax">
@@ -441,7 +489,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/23/无法解析主机-xxx/">
+    <link itemprop="mainEntityOfPage" href="https://ianxin.github.io/2018/01/23/无法解析主机-xxx/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gax">
@@ -624,7 +672,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/08/PBC库使用总结/">
+    <link itemprop="mainEntityOfPage" href="https://ianxin.github.io/2018/01/08/PBC库使用总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gax">
@@ -782,7 +830,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/02/hexo generate错误/">
+    <link itemprop="mainEntityOfPage" href="https://ianxin.github.io/2018/01/02/hexo generate错误/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gax">
@@ -941,7 +989,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/02/win10下使用MINGW编译PBC库/">
+    <link itemprop="mainEntityOfPage" href="https://ianxin.github.io/2018/01/02/win10下使用MINGW编译PBC库/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gax">
@@ -1099,7 +1147,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/30/test/">
+    <link itemprop="mainEntityOfPage" href="https://ianxin.github.io/2017/10/30/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gax">
@@ -1259,7 +1307,7 @@ hexo常用命令12345678hexo clean #清除缓存和public文件
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/30/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://ianxin.github.io/2017/10/30/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gax">
@@ -1710,10 +1758,38 @@ hexo常用命令12345678hexo clean #清除缓存和public文件
 
 
 
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.3"></script>
+
+
 
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
   
