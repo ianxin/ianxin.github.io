@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://ianxin.github.io/2018/03/14/A-B%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2018-03-14T04:40:22.033Z</lastmod>
+    <lastmod>2018-03-16T00:56:21.715Z</lastmod>
     <data>
         <display>
         <title>A+B问题</title>
@@ -15,6 +15,29 @@
          
          
            
+             
+              <breadCrumb title="Algorithm" url="https://ianxin.github.io/categories/Algorithm/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://ianxin.github.io/2018/03/16/fizz-buzz%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2018-03-16T00:55:22.449Z</lastmod>
+    <data>
+        <display>
+        <title>fizz buzz问题</title>
+        <pubTime>2018-03-16T00:42:35.000Z</pubTime>
+        
+        <tag>Python; Algorithm</tag>
+         
+         
+           
+             
+              <breadCrumb title="Algorithm" url="https://ianxin.github.io/categories/Algorithm/"/>
+          
         </display>
     </data>
     </url>
