@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="gax">
 <meta property="og:description" content="常用参数123456789ps #当前shell下的进程ps -e 运行的守护进程ps -f  process with full optionps -l 显示更多进程信息ps -ef 显示所有终端的进程和守护进程ps a  显示所有运行在终端的进程ps x 显示所有不运行在终端的进程ps aux 和ps -l 相似ps -u 显示指定用户的进程 ps 命令是 Process Status 的缩写">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-01T08:52:41.427Z">
+<meta property="og:updated_time" content="2018-04-01T10:25:05.298Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 常用命令之 PS">
 <meta name="twitter:description" content="常用参数123456789ps #当前shell下的进程ps -e 运行的守护进程ps -f  process with full optionps -l 显示更多进程信息ps -ef 显示所有终端的进程和守护进程ps a  显示所有运行在终端的进程ps x 显示所有不运行在终端的进程ps aux 和ps -l 相似ps -u 显示指定用户的进程 ps 命令是 Process Status 的缩写">
@@ -383,7 +383,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gax@ubuntu:~$ ps -C bash</div><div class="line">   PID TTY          TIME CMD</div><div class="line">  2184 pts/4    00:00:00 bash</div><div class="line"> 56952 pts/17   00:00:00 bash</div><div class="line"> 56973 pts/18   00:00:00 bash</div></pre></td></tr></table></figure>
 <p>需要更多的信息，可以添加 <code>-f</code> 。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gax@ubuntu:~$ ps -f -C bash</div><div class="line">UID         PID   PPID  C STIME TTY          TIME CMD</div><div class="line">gax        2184   2178  0 13:45 pts/4    00:00:00 bash</div><div class="line">gax       56952   2178  0 15:36 pts/17   00:00:00 bash</div><div class="line">gax       56973   2178  0 15:36 pts/18   00:00:00 bash</div></pre></td></tr></table></figure>
-<p>按 CPU 使用率来排序</p>
+<p>按 CPU 使用率来排序(降序)，升序使用<code>ps aux --sort +pcpu|head</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">gax@ubuntu:~$ ps aux --sort -pcpu|head</div><div class="line">USER        PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND</div><div class="line">root        997  0.3  5.6 379584 55928 tty7     Ss+  13:40   0:34 /usr/lib/xorg/Xorg -core :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch</div><div class="line">gax        1745  0.3  5.2 1172964 51880 ?       Ssl  13:40   0:34 compiz</div><div class="line">root        861  0.1  0.1 192800  1616 ?        Ssl  13:40   0:11 /usr/bin/vmtoolsd</div><div class="line">gax        1819  0.1  0.6 509076  6304 ?        Sl   13:40   0:13 /usr/bin/vmtoolsd -n vmusr --blockFd 3</div><div class="line">gax        2178  0.1  2.7 665736 27816 ?        Sl   13:45   0:14 /usr/lib/gnome-terminal/gnome-terminal-server</div><div class="line">root          1  0.0  0.5 185168  5204 ?        Ss   13:40   0:04 /lib/systemd/systemd --system --deserialize 22</div><div class="line">root          2  0.0  0.0      0     0 ?        S    13:40   0:00 [kthreadd]</div><div class="line">root          3  0.0  0.0      0     0 ?        S    13:40   0:03 [ksoftirqd/0]</div><div class="line">root          5  0.0  0.0      0     0 ?        S&lt;   13:40   0:00 [kworker/0:0H]</div></pre></td></tr></table></figure>
 <p>按内存的使用来排序</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">gax@ubuntu:~$ ps aux --sort -pmem|head</div><div class="line">USER        PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND</div><div class="line">gax        1829  0.0  6.7 986408 66972 ?        Sl   13:40   0:06 /usr/bin/gnome-software --gapplication-service</div><div class="line">root        997  0.3  5.6 379584 55928 tty7     Ss+  13:40   0:34 /usr/lib/xorg/Xorg -core :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch</div><div class="line">gax        1745  0.3  5.2 1172964 51880 ?       Ssl  13:40   0:34 compiz</div><div class="line">gax        1924  0.0  3.6 814172 36556 ?        Sl   13:41   0:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory local --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx1891x3 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/1891/3</div><div class="line">gax        1820  0.0  2.8 867168 28008 ?        Sl   13:40   0:05 nautilus -n</div><div class="line">gax        2178  0.1  2.7 665736 27816 ?        Sl   13:45   0:14 /usr/lib/gnome-terminal/gnome-terminal-server</div><div class="line">gax        1891  0.0  2.4 869692 24536 ?        Sl   13:41   0:00 /usr/lib/evolution/evolution-calendar-factory</div><div class="line">gax        1911  0.0  2.1 821724 21064 ?        Sl   13:41   0:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory contacts --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx1891x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/1891/2</div><div class="line">root       1894  0.0  1.7 635288 17860 ?        Sl   13:41   0:00 /usr/lib/x86_64-linux-gnu/fwupd/fwupd</div></pre></td></tr></table></figure>
@@ -476,6 +476,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/04/01/Linux-下查看进程运行时间/" rel="prev" title="Linux 下查看进程运行时间">
+                Linux 下查看进程运行时间 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -555,7 +559,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
