@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="使用 isof  在管理者模式下，使用 ‘isof -i’ 显示当前端口的占用情况 12345678910111213gax@ubuntu:~$ sudo lsof -i[sudo] password for gax: COMMAND   PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAMEavahi-dae 796  avahi   12u  IPv">
+<meta name="description" content="使用 lsof  在管理者模式下，使用 ‘lsof -i’ 显示当前端口的占用情况 12345678910111213gax@ubuntu:~$ sudo lsof -i[sudo] password for gax: COMMAND   PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAMEavahi-dae 796  avahi   12u  IPv">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 下查看端口占用情况">
 <meta property="og:url" content="https://ianxin.github.io/2018/04/02/Linux-下查看端口占用情况/index.html">
 <meta property="og:site_name" content="gax">
-<meta property="og:description" content="使用 isof  在管理者模式下，使用 ‘isof -i’ 显示当前端口的占用情况 12345678910111213gax@ubuntu:~$ sudo lsof -i[sudo] password for gax: COMMAND   PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAMEavahi-dae 796  avahi   12u  IPv">
+<meta property="og:description" content="使用 lsof  在管理者模式下，使用 ‘lsof -i’ 显示当前端口的占用情况 12345678910111213gax@ubuntu:~$ sudo lsof -i[sudo] password for gax: COMMAND   PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAMEavahi-dae 796  avahi   12u  IPv">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-02T11:38:25.414Z">
+<meta property="og:updated_time" content="2018-04-02T11:40:38.973Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 下查看端口占用情况">
-<meta name="twitter:description" content="使用 isof  在管理者模式下，使用 ‘isof -i’ 显示当前端口的占用情况 12345678910111213gax@ubuntu:~$ sudo lsof -i[sudo] password for gax: COMMAND   PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAMEavahi-dae 796  avahi   12u  IPv">
+<meta name="twitter:description" content="使用 lsof  在管理者模式下，使用 ‘lsof -i’ 显示当前端口的占用情况 12345678910111213gax@ubuntu:~$ sudo lsof -i[sudo] password for gax: COMMAND   PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAMEavahi-dae 796  avahi   12u  IPv">
 
 
 
@@ -370,9 +370,9 @@
 
       
         <ul>
-<li>使用 <code>isof</code></li>
+<li>使用 <code>lsof</code></li>
 </ul>
-<p>在管理者模式下，使用 ‘isof -i’ 显示当前端口的占用情况</p>
+<p>在管理者模式下，使用 ‘lsof -i’ 显示当前端口的占用情况</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">gax@ubuntu:~$ sudo lsof -i</div><div class="line">[sudo] password for gax: </div><div class="line">COMMAND   PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME</div><div class="line">avahi-dae 796  avahi   12u  IPv4  18915      0t0  UDP *:mdns </div><div class="line">avahi-dae 796  avahi   13u  IPv6  18916      0t0  UDP *:mdns </div><div class="line">avahi-dae 796  avahi   14u  IPv4  18917      0t0  UDP *:57000 </div><div class="line">avahi-dae 796  avahi   15u  IPv6  18918      0t0  UDP *:49216 </div><div class="line">cupsd     798   root   10u  IPv6  20749      0t0  TCP ip6-localhost:ipp (LISTEN)</div><div class="line">cupsd     798   root   11u  IPv4  20750      0t0  TCP localhost:ipp (LISTEN)</div><div class="line">cups-brow 829   root    8u  IPv4  20936      0t0  UDP *:ipp </div><div class="line">dhclient  976   root    6u  IPv4  21916      0t0  UDP *:bootpc </div><div class="line">dnsmasq   997 nobody    4u  IPv4  21971      0t0  UDP ubuntu:domain </div><div class="line">dnsmasq   997 nobody    5u  IPv4  21972      0t0  TCP ubuntu:domain (LISTEN)</div></pre></td></tr></table></figure>
 <p>各列信息意义如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">COMMAND:进程名字 </div><div class="line">PID：进程标识符</div><div class="line">USER：进程拥有者  </div><div class="line">FD：文件描述符   </div><div class="line">TYPE：文件类型 </div><div class="line">DEVICE：指定磁盘名称 </div><div class="line">SIZE/OFF：文件大小</div><div class="line">NODE：索引节点 </div><div class="line">NAME：协议名称、IP、端口、状态。若是常见服务，则显示协议名称</div></pre></td></tr></table></figure>
