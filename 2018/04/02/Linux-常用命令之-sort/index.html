@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="Vim," />
+  <meta name="keywords" content="Linux," />
 
 
 
@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="基本命令12345678910111213i #编辑模式Esc #退出编辑模式:q #退出Vim:q! #强制退出Vim:w #写入磁盘，用于保存文件:wq #写入磁盘并退出Vimo #在当前行下方新建一行O #在当前行上方新建一行J #连接当前行和下一行 移动光标1234A #光标移动到当前行行尾并进入编辑模式0 #光标移动到当前行行首$ #光标移动到当前行行尾G #光标移动到文件最后一行 文本">
-<meta name="keywords" content="Vim">
+<meta name="description" content="sort 将文件的每一行作为一个单位，相互比较，比较原则是从首字符向后，依次按 ASCII 码值进行比较，最后将他们按升序输出。 常用参数： 123456sort -r #默认升序，-r降序sort -u #去除重复行sort -n #按数字排序sort -o #重定向sort -t  #指定间隔符，和 cut -d 选项类似sort -k  #指定第几列 默认排序 123456789101112">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vim 常用命令">
-<meta property="og:url" content="https://ianxin.github.io/2018/03/04/Vim常用命令/index.html">
+<meta property="og:title" content="Linux 常用命令之 sort">
+<meta property="og:url" content="https://ianxin.github.io/2018/04/02/Linux-常用命令之-sort/index.html">
 <meta property="og:site_name" content="gax">
-<meta property="og:description" content="基本命令12345678910111213i #编辑模式Esc #退出编辑模式:q #退出Vim:q! #强制退出Vim:w #写入磁盘，用于保存文件:wq #写入磁盘并退出Vimo #在当前行下方新建一行O #在当前行上方新建一行J #连接当前行和下一行 移动光标1234A #光标移动到当前行行尾并进入编辑模式0 #光标移动到当前行行首$ #光标移动到当前行行尾G #光标移动到文件最后一行 文本">
+<meta property="og:description" content="sort 将文件的每一行作为一个单位，相互比较，比较原则是从首字符向后，依次按 ASCII 码值进行比较，最后将他们按升序输出。 常用参数： 123456sort -r #默认升序，-r降序sort -u #去除重复行sort -n #按数字排序sort -o #重定向sort -t  #指定间隔符，和 cut -d 选项类似sort -k  #指定第几列 默认排序 123456789101112">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-07T00:47:19.709Z">
+<meta property="og:updated_time" content="2018-04-02T03:09:03.956Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vim 常用命令">
-<meta name="twitter:description" content="基本命令12345678910111213i #编辑模式Esc #退出编辑模式:q #退出Vim:q! #强制退出Vim:w #写入磁盘，用于保存文件:wq #写入磁盘并退出Vimo #在当前行下方新建一行O #在当前行上方新建一行J #连接当前行和下一行 移动光标1234A #光标移动到当前行行尾并进入编辑模式0 #光标移动到当前行行首$ #光标移动到当前行行尾G #光标移动到文件最后一行 文本">
+<meta name="twitter:title" content="Linux 常用命令之 sort">
+<meta name="twitter:description" content="sort 将文件的每一行作为一个单位，相互比较，比较原则是从首字符向后，依次按 ASCII 码值进行比较，最后将他们按升序输出。 常用参数： 123456sort -r #默认升序，-r降序sort -u #去除重复行sort -n #按数字排序sort -o #重定向sort -t  #指定间隔符，和 cut -d 选项类似sort -k  #指定第几列 默认排序 123456789101112">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://ianxin.github.io/2018/03/04/Vim常用命令/"/>
+  <link rel="canonical" href="https://ianxin.github.io/2018/04/02/Linux-常用命令之-sort/"/>
 
 
 
 
 
-  <title>Vim 常用命令 | gax</title>
+  <title>Linux 常用命令之 sort | gax</title>
   
 
 
@@ -269,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ianxin.github.io/2018/03/04/Vim常用命令/">
+    <link itemprop="mainEntityOfPage" href="https://ianxin.github.io/2018/04/02/Linux-常用命令之-sort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gax">
@@ -286,7 +286,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Vim 常用命令</h2>
+          <h2 class="post-title" itemprop="name headline">Linux 常用命令之 sort</h2>
         
 
         <div class="post-meta">
@@ -298,8 +298,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-04T21:22:31+08:00">
-                2018-03-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-02T11:07:55+08:00">
+                2018-04-02
               </time>
             
 
@@ -309,6 +309,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -316,7 +338,7 @@
 
           
           
-             <span id="/2018/03/04/Vim常用命令/" class="leancloud_visitors" data-flag-title="Vim 常用命令">
+             <span id="/2018/04/02/Linux-常用命令之-sort/" class="leancloud_visitors" data-flag-title="Linux 常用命令之 sort">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -347,11 +369,35 @@
       
 
       
-        <h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">i #编辑模式</div><div class="line">Esc #退出编辑模式</div><div class="line"></div><div class="line">:q #退出Vim</div><div class="line">:q! #强制退出Vim</div><div class="line"></div><div class="line">:w #写入磁盘，用于保存文件</div><div class="line">:wq #写入磁盘并退出Vim</div><div class="line"></div><div class="line">o #在当前行下方新建一行</div><div class="line">O #在当前行上方新建一行</div><div class="line"></div><div class="line">J #连接当前行和下一行</div></pre></td></tr></table></figure>
-<h3 id="移动光标"><a href="#移动光标" class="headerlink" title="移动光标"></a>移动光标</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">A #光标移动到当前行行尾并进入编辑模式</div><div class="line">0 #光标移动到当前行行首</div><div class="line">$ #光标移动到当前行行尾</div><div class="line">G #光标移动到文件最后一行</div></pre></td></tr></table></figure>
-<h3 id="文本操作"><a href="#文本操作" class="headerlink" title="文本操作"></a>文本操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">x #删除当前字符</div><div class="line">3x #删除当前字符及其后两个字符</div><div class="line"></div><div class="line">yy #复制当前行</div><div class="line">y$ #复制当前光标位置到当前行的末尾</div><div class="line">y0 #复制当前光标位置到行首</div><div class="line"></div><div class="line">dd #剪切当前行</div><div class="line">d$ #剪切当前光标位置到当前行的末尾</div><div class="line">d0 #剪切当前光标位置到行首</div><div class="line">dG #剪切从当前行到文件的末尾</div><div class="line"></div><div class="line">p #小p粘贴文本到当前行之下</div><div class="line">P #大P粘贴文本到当前行之下</div><div class="line"></div><div class="line">u #undo,撤销操作</div></pre></td></tr></table></figure>
-<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#查找一行</div><div class="line">fa #搜索当前行出现的a字符，输入;来重复查找</div><div class="line"></div><div class="line">#查找整个文件</div><div class="line">/[] #[]中为要搜索的词，通过n来重复查找</div><div class="line"></div><div class="line">#查找和替换</div><div class="line">:%s/line/Line/g #查找整个文件的line并替换为Line，如果省略 g，则只替换每个文本行中第一个匹配的字符串，%指定要操作的行数。表示从第一行到最后一行。操作范围也可以用 1,5 来代替或者用 1,$ 来代替，意思是“从第一行到文件的最后一行。”如果省略了文本行的范围，那么操作只对当前行生效</div></pre></td></tr></table></figure>
-<h3 id="多个文件"><a href="#多个文件" class="headerlink" title="多个文件"></a>多个文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">:n #回到下一个文件</div><div class="line">:N #回到上一个文件</div></pre></td></tr></table></figure>
+        <p><code>sort</code> 将文件的每一行作为一个单位，相互比较，比较原则是从首字符向后，依次按 <code>ASCII</code> 码值进行比较，最后将他们按升序输出。</p>
+<p>常用参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">sort -r #默认升序，-r降序</div><div class="line">sort -u #去除重复行</div><div class="line">sort -n #按数字排序</div><div class="line">sort -o #重定向</div><div class="line">sort -t  #指定间隔符，和 cut -d 选项类似</div><div class="line">sort -k  #指定第几列</div></pre></td></tr></table></figure>
+<p>默认排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">gax@ubuntu:~$ cat seq.txt</div><div class="line">banana</div><div class="line">apple</div><div class="line">pear</div><div class="line">orange</div><div class="line">pear</div><div class="line"></div><div class="line">gax@ubuntu:~$ sort seq.txt </div><div class="line">apple</div><div class="line">banana</div><div class="line">orange</div><div class="line">pear</div><div class="line">pear</div></pre></td></tr></table></figure>
+<p>去除重复行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gax@ubuntu:~$ sort -u seq.txt </div><div class="line">apple</div><div class="line">banana</div><div class="line">orange</div><div class="line">pear</div></pre></td></tr></table></figure>
+<p>按降序排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">gax@ubuntu:~$ sort -r seq.txt </div><div class="line">pear</div><div class="line">pear</div><div class="line">orange</div><div class="line">banana</div><div class="line">apple</div></pre></td></tr></table></figure>
+<p>重定向</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">gax@ubuntu:~$ cat seq.txt</div><div class="line">banana</div><div class="line">apple</div><div class="line">pear</div><div class="line">orange</div><div class="line">pear</div><div class="line"></div><div class="line">gax@ubuntu:~$ sort -ru seq.txt </div><div class="line">pear</div><div class="line">orange</div><div class="line">banana</div><div class="line">apple</div><div class="line"></div><div class="line">gax@ubuntu:~$ sort -ru seq.txt -o seq1.txt</div><div class="line">gax@ubuntu:~$ cat seq1.txt </div><div class="line">pear</div><div class="line">orange</div><div class="line">banana</div><div class="line">apple</div></pre></td></tr></table></figure>
+<p><code>sort</code> 默认按字符排序，出现数字 <code>10</code> 比数字 <code>2</code> 小的原因是，<code>sort</code> 将数字当成字符比较，首先比较数字 <code>10</code> 的第一位 <code>1</code> 比数字 <code>2</code> 小。想要按照数字排序，需要加 <code>-n</code> 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">gax@ubuntu:~$ sort number.txt </div><div class="line">1</div><div class="line">10</div><div class="line">2</div><div class="line">20</div><div class="line">3</div><div class="line">4</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">gax@ubuntu:~$ sort -n number.txt </div><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">10</div><div class="line">20</div></pre></td></tr></table></figure>
+<p>当一行出现多种区域时，默认按行首字母排序，可以通过参数 <code>-t -k</code> 选择不同的域。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">gax@ubuntu:~$ cat company.txt </div><div class="line">google:110:5000</div><div class="line">baidu:100:5000</div><div class="line">guge:50:3000</div><div class="line">sohu:100:4500</div><div class="line"></div><div class="line">gax@ubuntu:~$ sort company.txt </div><div class="line">baidu:100:5000</div><div class="line">google:110:5000</div><div class="line">guge:50:3000</div><div class="line">sohu:100:4500</div><div class="line"></div><div class="line">gax@ubuntu:~$ sort -t  &apos;:&apos; -k2n  company.txt </div><div class="line">guge:50:3000</div><div class="line">baidu:100:5000</div><div class="line">sohu:100:4500</div><div class="line">google:110:5000</div></pre></td></tr></table></figure>
+<p>参数 <code>-t</code> 指定分隔符，<code>-k</code> 选择不同的域，<code>-t  &#39;:&#39; -k2n</code> 表示，以 <code>:</code> 号为分隔符，选择第二列，并按照数字排列。我们看到第二列有相同的数字，此时可以增加条件，当第二列相同时，按照第三列来排序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gax@ubuntu:~$ sort -t &apos;:&apos; -k2n -k3n company.txt </div><div class="line">guge:50:3000</div><div class="line">sohu:100:4500</div><div class="line">baidu:100:5000</div><div class="line">google:110:5000</div></pre></td></tr></table></figure>
+<p><code>-k</code> 选项的语法格式：<code>[ FStart [ .CStart ] ][ Modifier ] [ , [ FEnd [ .CEnd ] ][ Modifier ] ]</code> ，这个语法格式可以被其中的 <code>,</code> 分为两大部分，<code>Start</code> 部分和 <code>End</code> 部分。如果不设定<code>End</code> 部分，那么就认为<code>End</code> 被设定为行尾。</p>
+<p><code>Start</code> 部分由三部分组成，其中的 <code>Modifier</code> 部分就是我们之前说过的类似 <code>n</code> 和 <code>r</code> 的选项部分。<code>C.Start</code> 是可以省略的，省略的话就表示从本域的开头部分开始。之前例子中的 <code>-k2</code> 和 <code>-k3</code> 就是省略了 <code>C.Start</code>。</p>
+<p><code>FStart.CStart</code>，其中 <code>FStart</code> 表示使用的域，而 <code>CStart</code> 则表示在 <code>FStart</code> 域中从第几个字符开始算排序首字符。</p>
+<p>同理，在 <code>End</code> 部分中，你可以设定 <code>FEnd.CEnd</code>，如果你省略 <code>.CEnd</code>，则表示到域尾，即本域的最后一个字符。或者，如果你将 <code>CEnd</code> 设定为 <code>0</code>，也是表示结尾到域尾。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gax@ubuntu:~$ sort -t : -k1.2 company.txt </div><div class="line">baidu:100:5000</div><div class="line">sohu:100:4500</div><div class="line">google:110:5000</div><div class="line">guge:50:3000</div></pre></td></tr></table></figure>
+<p><code>-k1.2</code> 表示从第一列的第二个字符开始排序，因为没有给出 <code>End</code> 部分，所以默认到最后一个字符。可以看到 <code>sohu</code> 与 <code>google</code> 第二个都是 <code>o</code> 但是 <code>sohu</code> 第三个是 <code>h</code>  ，所以排在前面。</p>
+<p>如果只以第二个字符排序，我们可以使用下面的命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gax@ubuntu:~$ sort -t : -k1.2,1.2 company.txt </div><div class="line">baidu:100:5000</div><div class="line">google:110:5000</div><div class="line">sohu:100:4500</div><div class="line">guge:50:3000</div></pre></td></tr></table></figure>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.frost.net.cn/wordpress/2016/12/05/linux%E6%8E%92%E5%BA%8F-sort%E5%91%BD%E4%BB%A4/" target="_blank" rel="external">linux排序–sort命令</a></p>
+<p><a href="http://man.linuxde.net/sort" target="_blank" rel="external">sort命令</a></p>
+<p><a href="http://roclinux.cn/?p=1350" target="_blank" rel="external">《sort帮你排序》-linux命令五分钟系列之二十六</a></p>
 
       
     </div>
@@ -396,7 +442,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://ianxin.github.io/2018/03/04/Vim常用命令/" title="Vim 常用命令">https://ianxin.github.io/2018/03/04/Vim常用命令/</a>
+    <a href="https://ianxin.github.io/2018/04/02/Linux-常用命令之-sort/" title="Linux 常用命令之 sort">https://ianxin.github.io/2018/04/02/Linux-常用命令之-sort/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -411,7 +457,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Vim/" rel="tag"># Vim</a>
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
           
         </div>
       
@@ -424,8 +470,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/04/Git常用命令/" rel="next" title="Git 常用命令">
-                <i class="fa fa-chevron-left"></i> Git 常用命令
+              <a href="/2018/04/01/孤儿进程与僵尸进程/" rel="next" title="孤儿进程与僵尸进程">
+                <i class="fa fa-chevron-left"></i> 孤儿进程与僵尸进程
               </a>
             
           </div>
@@ -433,10 +479,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/07/Cookies与Session的区别/" rel="prev" title="Cookies 与 Session 的区别">
-                Cookies 与 Session 的区别 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -588,7 +630,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本命令"><span class="nav-number">1.</span> <span class="nav-text">基本命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动光标"><span class="nav-number">2.</span> <span class="nav-text">移动光标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本操作"><span class="nav-number">3.</span> <span class="nav-text">文本操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搜索"><span class="nav-number">4.</span> <span class="nav-text">搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个文件"><span class="nav-number">5.</span> <span class="nav-text">多个文件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">1.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
