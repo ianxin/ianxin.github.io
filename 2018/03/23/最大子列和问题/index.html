@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="gax">
 <meta property="og:description" content="问题：给定一个整数数组，找到一个具有最大和的子数组，返回其最大和。 样例 给出数组[−2,2,−3,4,−1,2,1,−5,3]，符合要求的子数组为[4,−1,2,1]，其最大和为6 算法1： 123456789101112#!/usr/bin/env python3# -*- coding: utf-8 -*-def maxSubArray(nums):    max_num = nums[0]">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-08T07:58:12.404Z">
+<meta property="og:updated_time" content="2018-04-08T08:03:51.500Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="最大子列和问题">
 <meta name="twitter:description" content="问题：给定一个整数数组，找到一个具有最大和的子数组，返回其最大和。 样例 给出数组[−2,2,−3,4,−1,2,1,−5,3]，符合要求的子数组为[4,−1,2,1]，其最大和为6 算法1： 123456789101112#!/usr/bin/env python3# -*- coding: utf-8 -*-def maxSubArray(nums):    max_num = nums[0]">
@@ -374,7 +374,7 @@
 <p>给出数组<code>[−2,2,−3,4,−1,2,1,−5,3]</code>，符合要求的子数组为<code>[4,−1,2,1]</code>，其最大和为<code>6</code></p>
 <p>算法1：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">maxSubArray</span><span class="params">(nums)</span>:</span></div><div class="line">    max_num = nums[<span class="number">0</span>]</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)):</div><div class="line">        this_sum = <span class="number">0</span></div><div class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i,len(nums)):</div><div class="line">            this_sum += nums[j]</div><div class="line">            <span class="keyword">if</span> this_sum &gt; max_num:</div><div class="line">                max_num = this_sum</div><div class="line">    <span class="keyword">return</span> max_num</div></pre></td></tr></table></figure>
-<p>第一层循环负责子序列的起始位置，第二层循环负责子序列相加，每次相加都与最大值比较。当<code>i=0</code> 时，第二层循环遍历的子列和：<code>nums[0],nums[0]+nums[1],...,nums[0]+nums[1]+...+nums[n]</code> 。如果把<code>max_num = 0</code> ，在序列全为负数是将出现错误，此时的将为0，实际应为负数。因此，需要将最大值设为数组的第一位数字。</p>
+<p>第一层循环负责子序列的起始位置，第二层循环负责子序列相加，每次相加都与最大值比较。当<code>i=0</code> 时，第二层循环遍历的子列和：<code>nums[0],nums[0]+nums[1],...,nums[0]+nums[1]+...+nums[n]</code> 。如果把<code>max_num = 0</code> ，在序列全为负数时将出现错误，这时的输出为0，实际应为负数。因此，需要将最大值设为数组的第一位数字。</p>
 <p>算法2：</p>
 <p>思路：</p>
 <p>如果 <code>nums[i]</code> 为负数，那么任何以 <code>nums[i]</code> 为起点的子序列都不可能是最大和的子序列，此时可以把 <code>nums[i+1]</code> 作为起点。同样，任何负的子序列也不可能作为最大和子序列的前缀，假设负的子序列为<code>nums[i]...nums[j]</code> ，那么可以将 <code>nums[j+1]</code> 作为起点。如果有以 <code>nums[j]</code> 结尾的某序列和是负数，表明这个序列中的任何一个数不可能是与 <code>nums[j]</code> 后面的数形成的最大子序列的开头，但是并不表明 <code>nums[j]</code> 前面的某个序列就不是最大序列，也就是说不能确定最大子序列在 <code>nums[j]</code> 前还是 <code>nums[j]</code> 后，即最大子序列位置不能求出。但是能确保maxSum的值是当前最大的子序列和。</p>
@@ -544,7 +544,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -555,7 +555,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
