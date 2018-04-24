@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="Python," />
+  <meta name="keywords" content="Linux," />
 
 
 
@@ -85,18 +85,20 @@
 
 
 
-<meta name="description" content="使用 Python 从网络中下载图片，并保存在本地。 创建目录使用 os.path.mkdir(file_path) 创建保存图片的目录 12345import os#首先利用os.path.exits(file_path)判断目录是否已存在,若存在，返回True，否则返回Falseif not os.path.exits(file_path):  print(&apos;file_path文件夹不存在，已">
-<meta name="keywords" content="Python">
+<meta name="description" content="传统的磁盘管理传统的磁盘管理过程：首先对一个磁盘进行分区，然后将该分区进行文件系统格式化，接着将文件系统挂载即可使用。但是传统的磁盘管理灵活性较差。假设一个场景：初始我们对磁盘进行分区，随着用户的使用，分区空间不够使用。传统的做法是，再加一块硬盘，重新分区，格式化，挂载。然后将原分区的数据复制过来，接着将原分区卸载再重新挂载。如果数据很大，数据转移的时间将会很久，这对于需要7*24运行的服务器来说">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用 Python 下载图片">
-<meta property="og:url" content="https://ianxin.github.io/2018/01/25/使用Python下载图片/index.html">
+<meta property="og:title" content="Linux 磁盘管理之 LVM">
+<meta property="og:url" content="https://ianxin.github.io/2018/04/24/Linux磁盘管理之LVM/index.html">
 <meta property="og:site_name" content="gax">
-<meta property="og:description" content="使用 Python 从网络中下载图片，并保存在本地。 创建目录使用 os.path.mkdir(file_path) 创建保存图片的目录 12345import os#首先利用os.path.exits(file_path)判断目录是否已存在,若存在，返回True，否则返回Falseif not os.path.exits(file_path):  print(&apos;file_path文件夹不存在，已">
+<meta property="og:description" content="传统的磁盘管理传统的磁盘管理过程：首先对一个磁盘进行分区，然后将该分区进行文件系统格式化，接着将文件系统挂载即可使用。但是传统的磁盘管理灵活性较差。假设一个场景：初始我们对磁盘进行分区，随着用户的使用，分区空间不够使用。传统的做法是，再加一块硬盘，重新分区，格式化，挂载。然后将原分区的数据复制过来，接着将原分区卸载再重新挂载。如果数据很大，数据转移的时间将会很久，这对于需要7*24运行的服务器来说">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-07T00:48:02.304Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/90d96277ly1fqnmxqrsidj20df04qa9x.jpg">
+<meta property="og:updated_time" content="2018-04-24T05:09:47.715Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用 Python 下载图片">
-<meta name="twitter:description" content="使用 Python 从网络中下载图片，并保存在本地。 创建目录使用 os.path.mkdir(file_path) 创建保存图片的目录 12345import os#首先利用os.path.exits(file_path)判断目录是否已存在,若存在，返回True，否则返回Falseif not os.path.exits(file_path):  print(&apos;file_path文件夹不存在，已">
+<meta name="twitter:title" content="Linux 磁盘管理之 LVM">
+<meta name="twitter:description" content="传统的磁盘管理传统的磁盘管理过程：首先对一个磁盘进行分区，然后将该分区进行文件系统格式化，接着将文件系统挂载即可使用。但是传统的磁盘管理灵活性较差。假设一个场景：初始我们对磁盘进行分区，随着用户的使用，分区空间不够使用。传统的做法是，再加一块硬盘，重新分区，格式化，挂载。然后将原分区的数据复制过来，接着将原分区卸载再重新挂载。如果数据很大，数据转移的时间将会很久，这对于需要7*24运行的服务器来说">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/90d96277ly1fqnmxqrsidj20df04qa9x.jpg">
 
 
 
@@ -126,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://ianxin.github.io/2018/01/25/使用Python下载图片/"/>
+  <link rel="canonical" href="https://ianxin.github.io/2018/04/24/Linux磁盘管理之LVM/"/>
 
 
 
 
 
-  <title>使用 Python 下载图片 | gax</title>
+  <title>Linux 磁盘管理之 LVM | gax</title>
   
 
 
@@ -269,7 +271,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ianxin.github.io/2018/01/25/使用Python下载图片/">
+    <link itemprop="mainEntityOfPage" href="https://ianxin.github.io/2018/04/24/Linux磁盘管理之LVM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gax">
@@ -286,7 +288,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">使用 Python 下载图片</h2>
+          <h2 class="post-title" itemprop="name headline">Linux 磁盘管理之 LVM</h2>
         
 
         <div class="post-meta">
@@ -298,8 +300,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T14:26:44+08:00">
-                2018-01-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-24T10:32:43+08:00">
+                2018-04-24
               </time>
             
 
@@ -309,6 +311,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -316,7 +340,7 @@
 
           
           
-             <span id="/2018/01/25/使用Python下载图片/" class="leancloud_visitors" data-flag-title="使用 Python 下载图片">
+             <span id="/2018/04/24/Linux磁盘管理之LVM/" class="leancloud_visitors" data-flag-title="Linux 磁盘管理之 LVM">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -347,21 +371,45 @@
       
 
       
-        <p>使用 Python 从网络中下载图片，并保存在本地。</p>
-<h2 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h2><p>使用 <code>os.path.mkdir(file_path)</code> 创建保存图片的目录</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="comment">#首先利用os.path.exits(file_path)判断目录是否已存在,若存在，返回True，否则返回False</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exits(file_path):</div><div class="line">  print(<span class="string">'file_path文件夹不存在，已重新创建'</span>)</div><div class="line">  os.path.mkdir(file_path)<span class="comment">#创建目录</span></div></pre></td></tr></table></figure>
-<h2 id="获得图片名称"><a href="#获得图片名称" class="headerlink" title="获得图片名称"></a>获得图片名称</h2><p>从图片链接获得后缀名（.jpg/.png等）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">file_suffix = os.path.splitext(url)<span class="comment">#返回列表[路径/文件名，文件后缀]</span></div></pre></td></tr></table></figure>
-<p>获取系统文件分隔符</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">os.sep<span class="comment">#获得系统文件分隔符，避免不同平台造成不同的文件分隔符</span></div></pre></td></tr></table></figure>
-<p>拼接图片名称</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#filename = 路径+文件分隔符+图片名+后缀</span></div><div class="line">filename = file_path + os.sep + filename + file_suffix</div><div class="line"><span class="comment">#filename = '&#123;&#125;&#123;&#125;&#123;&#125;&#123;&#125;'.format(file_path,os.sep,filename,file_suffix)</span></div></pre></td></tr></table></figure>
-<h2 id="下载图片"><a href="#下载图片" class="headerlink" title="下载图片"></a>下载图片</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> urllib.request</div><div class="line"></div><div class="line">urllib.request.urlretrieve(url,filename)<span class="comment">#url为要下载图片链接，filename是保存路径和文件名</span></div><div class="line">print(<span class="string">"Done"</span>)</div></pre></td></tr></table></figure>
+        <h2 id="传统的磁盘管理"><a href="#传统的磁盘管理" class="headerlink" title="传统的磁盘管理"></a>传统的磁盘管理</h2><p>传统的磁盘管理过程：首先对一个磁盘进行分区，然后将该分区进行文件系统格式化，接着将文件系统挂载即可使用。但是传统的磁盘管理灵活性较差。假设一个场景：初始我们对磁盘进行分区，随着用户的使用，分区空间不够使用。传统的做法是，再加一块硬盘，重新分区，格式化，挂载。然后将原分区的数据复制过来，接着将原分区卸载再重新挂载。如果数据很大，数据转移的时间将会很久，这对于需要7*24运行的服务器来说是不可接受的，为了能够对磁盘空间进行动态管理，催生出 LVM 技术。</p>
+<h2 id="LVM-的磁盘管理"><a href="#LVM-的磁盘管理" class="headerlink" title="LVM 的磁盘管理"></a>LVM 的磁盘管理</h2><p>LVM（Logical volume Manager）是逻辑卷管理的缩写。它可以动态调整磁盘空间的容量。通过将底层的磁盘抽象封装起来，屏蔽了底层硬盘的细节，然后以 LV（Logical Volume）逻辑卷的方式呈给上层。在传统的磁盘管理机制中，上层直接访问文件系统，从而对底层的物理硬盘进行读取，而在LVM中，其通过对底层的硬盘进行封装，当我们对底层的物理硬盘进行操作时，其不再是针对分区进行操作，上层所有的操作都是针对 LV，因此上层感觉不到底层的变化。比如说增加一个物理硬盘，这个时候上层是感觉不到的，因为呈现给上层的是 LV 的方式。</p>
+<h2 id="LVM-原理"><a href="#LVM-原理" class="headerlink" title="LVM 原理"></a>LVM 原理</h2><p>首先给出 LVM 的逻辑图</p>
+<p><img src="https://ws1.sinaimg.cn/large/90d96277ly1fqnmxqrsidj20df04qa9x.jpg" alt="LVM逻辑图"></p>
+<ul>
+<li>PE：physical Extend，物理扩展。LVM 最小存储单元，默认容量为 4M ，类似文件系统中的 data block。LVM 的动态调整磁盘容量，本质上就是调整 PE 的个数。</li>
+<li>PV：Physical Volume，物理卷。可以将 PV 看作 LVM 下的磁盘格式。将磁盘格式化 PV 的过程就是把磁盘划分为一个个 PE 块的过程。</li>
+<li>VG：Volume Group，卷组。卷组可以看作一个 PE 池，里面有多个 PV 或者 PE。LVM 动态调整磁盘空间就是增减 LV 中 PE 个数。增加的 PE 由 VG 提供，减去的 PE 则放回到 VG 中。</li>
+<li>LV：Logical Volume，逻辑卷。PE，PV，VG都是底层的东西，我们不能直接使用，我们最终使用的是 LV。</li>
+</ul>
+<h2 id="创建过程"><a href="#创建过程" class="headerlink" title="创建过程"></a>创建过程</h2><ol>
+<li>将硬盘格式化为 PV</li>
+</ol>
+<p>由图中我们可以看到两块硬盘：hda5，hda6（暂时忽略hda7）。首先利用 <code>pvcreat</code> 命令将两块硬盘格式化为 PV。此时 PV由多个 PE组成 。注意，这时的 PV 中 PE size为 0，可由 <code>pvdisplay</code> 查看。</p>
+<ol>
+<li>创建VG</li>
+</ol>
+<p>使用 <code>vgcreat</code> 创建 VG，此时可以指定 PE 的大小和 VG 的名称。PE 默认为 4M。在这里，我们将 VG 抽象为一个 PE 池。我们可以把一个或者多个 PV 加到 VG 当中，因为在第一步操作时就已经将该硬盘划分成了多个PE，所以将多个PV加到VG里面后，VG里面就存放了许许多多来自不同PV中的PE，我们通过上面的图片就可以看到，我们格式化了两块硬盘，每个硬盘分别格式化成了3个PE，然后将两块硬盘的PE都加到了我们的VG当中，那么我们的VG当中就包含了6个PE，这6个PE就是两个硬盘的PE之和。通常创建一个卷组的时候我们会为其取一个名字，也就是该VG的名字。</p>
+<ol>
+<li>基于VG创建LV</li>
+</ol>
+<p>使用<code>lvcreat</code> 命令创建 LV。这个时候我们创建LV其实就是从VG中拿出我们指定数量的PE。VG中的PE可以来自不同的PV，我们可以创建的LV的大小取决于VG当中PE存在的数量，并且我们创建的LV大小一定是PE的整数倍。</p>
+<ol>
+<li>将创建好的LV进行文件系统格式化</li>
+</ol>
+<p>此时的LV和传统磁盘管理中的分区类似。后面就是文件系统格式化，挂载即可使用。创建好LV以后，会在 /dev 目录下看到LV信息，例如 /dev/vgname/lvname， 每创建一个VG，会在/dev目录下创建一个以该VG名字命名的文件夹，在该VG的基础上创建好LV以后，则在这个VG目录下多出一个以LV名字命名的逻辑卷。</p>
+<h2 id="LV的扩充"><a href="#LV的扩充" class="headerlink" title="LV的扩充"></a>LV的扩充</h2><p>假如LV的空间不够使用，需要扩充，此时VG中的PE也已使用完毕，这时应该怎么做呢？首先插入一个硬盘hda7，如上图。然后将硬盘格式化为PV，接着将使用<code>vgextend</code> 将PV加入VG中，最后在LV利用<code>lvextend</code>命令中扩充容量。如果VG中的PE还有剩余，可以直接使用<code>lvextend</code> 扩充。</p>
+<h2 id="LV的收缩"><a href="#LV的收缩" class="headerlink" title="LV的收缩"></a>LV的收缩</h2><p>与LV可以在线扩充不同，LV的缩小操作必须离线执行，要先卸载掉LV才可以。</p>
+<ol>
+<li><code>umount</code> 卸载LV</li>
+<li><code>resize2fs</code> 缩小文件系统</li>
+<li><code>lvreduce</code> 缩小LV</li>
+</ol>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="http://wiki.jikexueyuan.com/project/explore-python/File-Directory/os.html" target="_blank" rel="external">os 模块-Python之旅- 极客学院Wiki</a></li>
-<li><a href="http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/0013868321590543ff305fb9f9949f08d760883cc243812000" target="_blank" rel="external">操作文件和目录 - 廖雪峰的官方网站</a></li>
-<li><a href="https://www.jianshu.com/p/938763947de3" target="_blank" rel="external">python下载图片并保存到文件夹-简书</a></li>
-<li><a href="https://www.jianshu.com/p/5fb5dc9d4906" target="_blank" rel="external">Python os 模块使用笔记 - 简书</a></li>
+<li><a href="http://www.cnblogs.com/xiaoluo501395377/archive/2013/05/22/3093405.html" target="_blank" rel="external">Linux学习之CentOS(二十五)–Linux磁盘管理：LVM逻辑卷基本概念及LVM的工作原理</a></li>
+<li><a href="http://www.cnblogs.com/xiaoluo501395377/archive/2013/05/24/3096087.html" target="_blank" rel="external">Linux学习之CentOS(二十六)–Linux磁盘管理：LVM逻辑卷的创建及使用</a></li>
+</ul>
+<ul>
+<li><a href="http://www.cnblogs.com/xiaoluo501395377/archive/2013/05/24/3097785.html" target="_blank" rel="external">Linux学习之CentOS(二十七)–Linux磁盘管理：LVM逻辑卷的拉伸及缩减</a></li>
 </ul>
 
       
@@ -407,7 +455,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://ianxin.github.io/2018/01/25/使用Python下载图片/" title="使用 Python 下载图片">https://ianxin.github.io/2018/01/25/使用Python下载图片/</a>
+    <a href="https://ianxin.github.io/2018/04/24/Linux磁盘管理之LVM/" title="Linux 磁盘管理之 LVM">https://ianxin.github.io/2018/04/24/Linux磁盘管理之LVM/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -422,7 +470,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
           
         </div>
       
@@ -435,8 +483,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/24/Python正则表达式总结/" rel="next" title="Python 正则表达式总结">
-                <i class="fa fa-chevron-left"></i> Python 正则表达式总结
+              <a href="/2018/04/12/搜索目录文件/" rel="next" title="搜索目录文件">
+                <i class="fa fa-chevron-left"></i> 搜索目录文件
               </a>
             
           </div>
@@ -444,10 +492,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/27/爬虫路径定位总结/" rel="prev" title="爬虫路径定位总结">
-                爬虫路径定位总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -599,7 +643,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建目录"><span class="nav-number">1.</span> <span class="nav-text">创建目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获得图片名称"><span class="nav-number">2.</span> <span class="nav-text">获得图片名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载图片"><span class="nav-number">3.</span> <span class="nav-text">下载图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#传统的磁盘管理"><span class="nav-number">1.</span> <span class="nav-text">传统的磁盘管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LVM-的磁盘管理"><span class="nav-number">2.</span> <span class="nav-text">LVM 的磁盘管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LVM-原理"><span class="nav-number">3.</span> <span class="nav-text">LVM 原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建过程"><span class="nav-number">4.</span> <span class="nav-text">创建过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LV的扩充"><span class="nav-number">5.</span> <span class="nav-text">LV的扩充</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LV的收缩"><span class="nav-number">6.</span> <span class="nav-text">LV的收缩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
